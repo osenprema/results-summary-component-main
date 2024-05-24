@@ -29,7 +29,7 @@
       Coded by <a href="#">@osenprema</a>.
     </footer>
   </body>
-  <script type="text/javascript">
+  <script>
     const values = document.getElementById("summary__values");
     fetch("./data.json")
     .then(response => response.json())
@@ -41,6 +41,7 @@
         let val_ran = document.createElement("h2");
 
         val_img.src = reg.icon;
+        val_img.alt = "";
         val_val.innerHTML = reg.category;
         val_ran.innerHTML = "<span>" + reg.score + "</span> / 100";
 
