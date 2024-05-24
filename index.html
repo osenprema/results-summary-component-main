@@ -20,28 +20,7 @@
       </section>
       <section class="main__summary">
         <h1>Summary</h1>
-        <div class="summary__values">
-          <div>
-            <img src="./assets/images/icon-reaction.svg" alt="">
-            <h2>Reaction</h2>
-            <h2><span>80</span> / 100</h2>
-          </div>
-          <div>
-            <img src="./assets/images/icon-memory.svg" alt="">
-            <h2>Memory</h2>
-            <h2><span>92</span> / 100</h2>
-          </div>
-          <div>
-            <img src="./assets/images/icon-verbal.svg" alt="">
-            <h2>Verbal</h2>
-            <h2><span>61</span> / 100</h2>
-          </div>
-          <div>
-            <img src="./assets/images/icon-visual.svg" alt="">
-            <h2>Visual</h2>
-            <h2><span>72</span> / 100</h2>
-          </div>
-        </div>
+        <div id="summary__values" class="summary__values"></div>
         <button>Continue</button>
       </section>        
     </main>
@@ -50,4 +29,30 @@
       Coded by <a href="#">@osenprema</a>.
     </footer>
   </body>
+  <script type="text/javascript">
+    const values = document.getElementById("summary__values");
+    fetch("./data.json")
+    .then(response => response.json())
+    .then(data => {
+      data.forEach(reg => {
+        let new_value = document.createElement("div");
+        let val_img = document.createElement("img");
+        let val_val = document.createElement("h2");
+        let val_ran = document.createElement("h2");
+
+        val_img.src = reg.icon;
+        val_val.innerHTML = reg.category;
+        val_ran.innerHTML = "<span>" + reg.score + "</span> / 100";
+
+        new_value.appendChild(val_img);
+        new_value.appendChild(val_val);
+        new_value.appendChild(val_ran);
+
+        values.appendChild(new_value);
+      });
+      })
+    .catch(error => {
+      console.log(error);
+    })        
+  </script>
 </html>
