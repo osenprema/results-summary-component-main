@@ -1,0 +1,359 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Hanken Grotesk';
+  src: url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf"); }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Hanken Grotesk';
+  font-size: 18px; }
+
+/* 360 × 640 (small mobile) */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+main {
+  display: flex;
+  flex-direction: column; }
+  main .main__result {
+    color: white;
+    padding: 20px 80px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    background: linear-gradient(#7857ff, 70%, #2e2be9); }
+    main .main__result h1 {
+      font-size: 0.8rem;
+      color: #c8c7ff; }
+    main .main__result .result__score {
+      width: 115px;
+      height: 115px;
+      margin-top: 20px;
+      border-radius: 50%;
+      outline: none;
+      background: linear-gradient(#2e2be9, 55%, #7857ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      main .main__result .result__score h2:nth-child(1) {
+        font-size: 2.5rem; }
+      main .main__result .result__score h2:nth-child(2) {
+        font-size: 0.6rem;
+        color: #c8c7ff; }
+    main .main__result h3 {
+      font-size: 1rem;
+      margin-top: 20px; }
+    main .main__result p {
+      font-size: 0.7rem;
+      margin-top: 10px;
+      color: #c8c7ff; }
+  main .main__summary {
+    padding: 20px 30px; }
+    main .main__summary h1 {
+      font-size: 0.9rem; }
+    main .main__summary .summary__values div {
+      width: 100%;
+      height: 45px;
+      margin-top: 1.7vh;
+      padding: 0 10px;
+      font-size: 0.6rem;
+      display: flex;
+      align-items: center;
+      border-radius: 8px; }
+      main .main__summary .summary__values div h2:nth-child(2) {
+        margin-left: 10px; }
+      main .main__summary .summary__values div h2:nth-child(3) {
+        color: grey;
+        margin-left: auto; }
+        main .main__summary .summary__values div h2:nth-child(3) span {
+          font-weight: 900;
+          color: #303b5a; }
+    main .main__summary .summary__values div:nth-child(1) {
+      color: #ff5757;
+      background-color: rgba(255, 87, 87, 0.1); }
+    main .main__summary .summary__values div:nth-child(2) {
+      color: #ffb01f;
+      background-color: rgba(255, 176, 31, 0.1); }
+    main .main__summary .summary__values div:nth-child(3) {
+      color: #00bd91;
+      background-color: rgba(0, 189, 145, 0.1); }
+    main .main__summary .summary__values div:nth-child(4) {
+      color: #1125d4;
+      background-color: rgba(17, 37, 212, 0.1); }
+    main .main__summary button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      outline: none;
+      border-radius: 40px;
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: white;
+      background-color: #303b5a;
+      cursor: pointer; }
+    main .main__summary button:hover {
+      background-color: #1125d4; }
+
+.attribution {
+  font-size: 16px;
+  text-align: center;
+  color: #303b5a;
+  margin-bottom: 15px;
+  display: none; }
+
+.attribution a {
+  color: #1125d4;
+  font-weight: bold;
+  text-decoration: none; }
+
+/* 375 × 667 (medium mobile) */
+@media screen and (min-width: 375px) {
+  main .main__summary {
+    padding-top: 25px; }
+    main .main__summary .summary__values div {
+      margin-top: 2vh; }
+    main .main__summary button {
+      margin-top: 25px; } }
+/* 720 × 1280 (large mobile) */
+@media screen and (min-width: 720px) {
+  main {
+    width: 70vw;
+    height: 85vh;
+    margin: auto;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5);
+    -webkit-box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5);
+    -moz-box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5); }
+    main .main__result {
+      padding: 30px 60px;
+      border-radius: 25px; }
+      main .main__result h1 {
+        font-size: 1.6rem; }
+      main .main__result .result__score {
+        width: 190px;
+        height: 190px;
+        margin-top: 30px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 4.5rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 1.1rem; }
+      main .main__result h3 {
+        font-size: 1.7rem;
+        margin-top: 30px; }
+      main .main__result p {
+        font-size: 1.3rem;
+        margin-top: 20px; }
+    main .main__summary {
+      padding: 30px; }
+      main .main__summary h1 {
+        font-size: 1.6rem; }
+      main .main__summary .summary__values div {
+        height: 80px;
+        margin-top: 1.7vh;
+        padding: 0 20px;
+        font-size: 1rem; }
+        main .main__summary .summary__values div h2:nth-child(2) {
+          margin-left: 20px; }
+      main .main__summary button {
+        height: 80px;
+        margin-top: 40px;
+        font-size: 1.4rem; }
+
+  .attribution {
+    display: block; } }
+/* Mobiles in landscape position  */
+@media screen and (max-width: 667px) and (orientation: landscape) {
+  main {
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+    flex-direction: row;
+    border-radius: 25px;
+    box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5);
+    -webkit-box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5);
+    -moz-box-shadow: 0px 0px 30px -5px rgba(46, 43, 233, 0.5); }
+    main section {
+      width: 50%; }
+    main .main__result {
+      padding: 30px 40px;
+      border-radius: 25px; }
+      main .main__result h1 {
+        font-size: 1.1rem; }
+      main .main__result .result__score {
+        width: 140px;
+        height: 140px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 2.8rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 0.8rem; }
+      main .main__result h3 {
+        font-size: 1.1rem; }
+      main .main__result p {
+        font-size: 0.8rem; }
+    main .main__summary .summary__values div {
+      margin-top: 3vh; }
+    main .main__summary button {
+      height: 40px;
+      margin-top: 15px; } }
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+  main {
+    width: 45vw;
+    height: 50vh;
+    flex-direction: row; }
+    main section {
+      width: 50%; }
+    main .main__result {
+      padding: 30px 40px;
+      border-radius: 25px; }
+      main .main__result h1 {
+        font-size: 1rem; }
+      main .main__result .result__score {
+        width: 140px;
+        height: 140px;
+        margin-top: 25px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 2.8rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 0.8rem; }
+      main .main__result h3 {
+        font-size: 1.1rem;
+        margin-top: 30px; }
+      main .main__result p {
+        font-size: 0.9rem;
+        margin-top: 15px; }
+    main .main__summary h1 {
+      font-size: 1rem; }
+    main .main__summary .summary__values div {
+      height: 45px;
+      margin-top: 2vh;
+      padding: 0 10px;
+      font-size: 0.6rem; }
+    main .main__summary button {
+      height: 45px;
+      margin-top: 20px;
+      font-size: 0.8rem; } }
+/* 1366 × 768 (medium laptop) */
+@media screen and (min-width: 1366px) {
+  main {
+    width: 45vw;
+    height: 50vh;
+    flex-direction: row; }
+    main section {
+      width: 50%; }
+    main .main__result {
+      padding: 30px 40px;
+      border-radius: 25px; }
+      main .main__result h1 {
+        font-size: 1rem; }
+      main .main__result .result__score {
+        width: 140px;
+        height: 140px;
+        margin-top: 25px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 2.8rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 0.8rem; }
+      main .main__result h3 {
+        font-size: 1.1rem;
+        margin-top: 30px; }
+      main .main__result p {
+        font-size: 0.9rem;
+        margin-top: 15px; }
+    main .main__summary h1 {
+      font-size: 1rem; }
+    main .main__summary .summary__values div {
+      height: 45px;
+      margin-top: 2vh;
+      padding: 0 10px;
+      font-size: 0.6rem; }
+    main .main__summary button {
+      height: 45px;
+      margin-top: 20px;
+      font-size: 0.8rem; } }
+/* 1440 × 900 (medium desktop) */
+@media screen and (min-width: 1440px) {
+  main {
+    width: 50vw; }
+    main .main__result {
+      padding: 40px; }
+      main .main__result h1 {
+        font-size: 1.3rem; }
+      main .main__result .result__score {
+        width: 160px;
+        height: 160px;
+        margin-top: 30px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 3.5rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 0.9rem; }
+      main .main__result h3 {
+        font-size: 1.4rem;
+        margin-top: 35px; }
+      main .main__result p {
+        font-size: 1.1rem;
+        margin-top: 20px; }
+    main .main__summary h1 {
+      font-size: 1.3rem; }
+    main .main__summary .summary__values div {
+      height: 50px;
+      margin-top: 2.5vh;
+      font-size: 0.7rem; }
+    main .main__summary button {
+      margin-top: 25px;
+      font-size: 0.9rem; } }
+/* 1920 × 1080 (large desktop) */
+@media screen and (min-width: 1920px) {
+  main {
+    width: 50vw; }
+    main .main__result {
+      padding: 40px 50px; }
+      main .main__result h1 {
+        font-size: 1.7rem; }
+      main .main__result .result__score {
+        width: 190px;
+        height: 190px;
+        margin-top: 35px; }
+        main .main__result .result__score h2:nth-child(1) {
+          font-size: 4.4rem; }
+        main .main__result .result__score h2:nth-child(2) {
+          font-size: 1rem; }
+      main .main__result h3 {
+        font-size: 1.6rem;
+        margin-top: 40px; }
+      main .main__result p {
+        font-size: 1.4rem;
+        margin-top: 25px; }
+    main .main__summary {
+      padding: 40px; }
+      main .main__summary h1 {
+        font-size: 1.5rem; }
+      main .main__summary .summary__values div {
+        height: 60px;
+        margin-top: 2.5vh;
+        font-size: 0.8rem; }
+      main .main__summary button {
+        height: 50px;
+        margin-top: 30px;
+        font-size: 1rem; } }
+/* Desktops in portrait position  */
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  main {
+    height: 80vh; } }
+@media screen and (min-width: 900px) and (orientation: portrait) {
+  main {
+    width: 65vw;
+    height: 80vh; } }
+@media screen and (min-width: 1080px) and (orientation: portrait) {
+  main {
+    width: 65vw;
+    height: 60vh; } }
+
+/*# sourceMappingURL=styles.css.map */
